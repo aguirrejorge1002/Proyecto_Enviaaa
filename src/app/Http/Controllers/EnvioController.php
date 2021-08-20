@@ -69,18 +69,6 @@ class EnvioController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    /*public function edit($id)
-    {
-         $articulo = Articulo::find($id);
-         return view('articulo.edit')->with('articulo',$articulo);
-    }*/
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -103,25 +91,5 @@ class EnvioController extends Controller
         $envios->save();
 
         return redirect('envio');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        $articulo = Articulo::find($id);        
-        $articulo->delete();
-
-        return redirect('/articulos');
-    }
-
-    public function prueba()
-    {
-
-        return view('envio.prueba');
     }
 }
